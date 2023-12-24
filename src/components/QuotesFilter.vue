@@ -5,7 +5,7 @@ import { filter } from '../composables/useSearch'
 
 const filterOpen = ref(false)
 const filterPopupElement = ref<HTMLDivElement>()
-const filterOptions = ref(['quotes', 'from', 'user'])
+const filterOptions = ref(['أقوال', 'مؤلفين'])
 
 onClickOutside(filterPopupElement, () => {
   if (filterOpen.value) filterOpen.value = false
@@ -32,7 +32,7 @@ function changeFilterHandler(option: string) {
         <span class="hidden md:inline-block">{{ filter }}</span>
         <i-heroicons-outline-filter class="h-5 w-5 md:hidden" />
 
-        <i-heroicons-solid-chevron-down class="hidden md:inline-block -mr-1 ml-2 h-5 w-5" />
+        <i-heroicons-solid-chevron-down class="hidden md:inline-block -ml-1 mr-2 h-5 w-5" />
       </button>
     </div>
 
@@ -78,7 +78,7 @@ function changeFilterHandler(option: string) {
   @apply w-[48px] md:w-[106px];
 }
 .filter-button--container button.filter-button {
-  @apply inline-flex justify-between w-full rounded-l-md border border-gray-300 dark:border-gray-500 shadow-sm px-3 md:px-4 py-2 bg-gray-100 dark:bg-gray-700 text-sm font-medium capitalize text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:border-gray-200 transition-colors duration-300 focus:outline-none;
+  @apply inline-flex justify-between w-full rounded-r-md border border-gray-300 dark:border-gray-500 shadow-sm px-3 md:px-4 py-2 bg-gray-100 dark:bg-gray-700 text-sm font-medium capitalize text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:border-gray-200 transition-colors duration-300 focus:outline-none;
 }
 .filter-popup--container {
   @apply origin-top-left absolute z-10 left-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-900 ring-1 ring-black dark:ring-gray-500 ring-opacity-5 focus:outline-none;

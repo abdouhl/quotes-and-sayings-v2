@@ -13,7 +13,7 @@ onMounted(() => {
 })
 </script>
 
-<template>
+<template dir="rtl" >
   <div class="relative pt-12 pb-4 md:py-12 flex flex-col items-center">
     <div class="absolute right-4 top-4 md:right-8 md:top-8 space-x-3">
       <button
@@ -40,11 +40,11 @@ onMounted(() => {
       </button>
     </div>
 
-    <h1 class="mt-4 md:mt-0 text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-purple-600">
-      #Quote's
+    <h1 dir="rtl" class="py-4 mt-4 md:mt-0 text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-purple-600">
+      أقوال و اقتباسات
     </h1>
-    <p class="w-11/12 md:w-3/4 mb-4 text-sm md:text-xl text-center text-gray-500 dark:text-gray-50">
-      Kumpulan quote oleh orang-orang hebat di dunia sebagai penasehat dan penyemangat. Dibuat untuk event Hacktoberfest 2021.
+    <p dir="rtl" class="w-11/12 md:w-3/4 mb-4 text-sm md:text-xl text-center text-gray-500 dark:text-gray-50">
+     مجموعة منتقاة بعناية من الاقتباسات الملهمة من مشاهير ورياضيين وسياسيين ومؤلفين.
     </p>
 
     <div class="w-11/12 md:w-3/4 flex justify-center mb-4" :class="{ 'hidden': (route.name !== 'quote-gallery') }">

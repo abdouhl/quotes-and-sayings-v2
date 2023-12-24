@@ -3,7 +3,7 @@ import { ref, reactive, computed } from 'vue'
 import { IQuote, SearchType } from '../types.d'
 
 export const type = ref(SearchType.Main)
-export const filter = ref('quotes')
+export const filter = ref('أقوال')
 export const count = ref(0)
 
 export const keyword = reactive({
@@ -33,15 +33,10 @@ export const searchFilter = (quotes: IQuote[]) => {
 
   return quotes.filter((quote) => {
     switch (filter.value) {
-      case 'quotes':
+      case 'أقوال':
         return (quote.text.toLowerCase().includes(search.value.toLowerCase()))
-      case 'from':
+      case 'مؤلفين':
         return (quote.author.toLowerCase().includes(search.value.toLowerCase()))
-      case 'user':
-        if (!quote.github?.available)
-          return (quote.username.toLowerCase().includes(search.value.toLowerCase()))
-
-        return (quote.github?.name.toLowerCase().includes(search.value.toLowerCase()))
       default:
         return true
     }

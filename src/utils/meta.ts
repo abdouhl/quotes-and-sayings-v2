@@ -38,9 +38,9 @@ function generateMeta({ title, description, url }: IMeta) {
 }
 
 export function generateQuoteMeta(quote: IQuote) {
-  const title = `Quotes — Best Quote from ${quote.author}`
+  const title = `${quote.author}أفضل أقوال `
   const description = `"${quote.text}" - ${quote.author}`
-  const url = `https://quotes.nyan.my.id/quote/${quote.slug}`
+  const url = `https://www.quotesandsayings.net/quote/${quote.slug}`
 
   return {
     title,
