@@ -6,7 +6,7 @@ const yaml = require('js-yaml')
 const md5 = require('md5')
 const fetch = require('node-fetch')
 const sitemap = require('sitemap')
-
+const slugify = require('slugify')
 const dotenv = require('dotenv-flow')
 dotenv.config()
 
@@ -198,7 +198,7 @@ function randomGradientIndex() {
   return Math.floor(Math.random() * (AVAILABLE_GRADIENT_VARIANTS - 0) + 0)
 }
 
-function slugify(title, max = 80) {
+/*function slugify(title, max = 80) {
   const excludedWords = ['is', 'am', 'are', 'a', 'an', 'the', 'and', 'or', 'but', 'in', 'as']
 
   if (title.length > 100) {
@@ -221,7 +221,7 @@ function slugify(title, max = 80) {
   if (title.endsWith('-')) return title.slice(0, -1)
 
   return title
-}
+}*/
 
 function generateSitemap(quotes) {
   const quoteSitemapLists = quotes.map((quote) => {
