@@ -27,7 +27,6 @@ export const authorRouteLists: RouteRecordRaw[] = (authors).map((author) => {
     component: AuthorPage,
     meta: {
       author_quotes,
-      author,
     },
   }
 })
