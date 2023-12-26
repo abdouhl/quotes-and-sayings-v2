@@ -41,7 +41,7 @@
     "eslint": "^8.56.0",
     "js-yaml": "^4.1.0",
     "md5": "^2.3.0",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.6.1",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "sitemap": "^7.1.1",
