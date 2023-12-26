@@ -52,6 +52,21 @@ export function generateQuoteMeta(quote: IQuote) {
   }
 }
 
+export function generateAuthorMeta(quote: IQuote) {
+  const title = `أقوال ${quote.author}`
+  const description = `"مجموعة منتقاة بعناية من الاقتباسات الملهمة من ${quote.author}`
+  const url = `https://www.quotesandsayings.net/author/${quote.auth_slug}`
+
+  return {
+    title,
+    meta: generateMeta({
+      title,
+      description,
+      url,
+    }),
+  }
+}
+
 export function generateIndexMeta() {
   const title = 'Quotes — Every Day Inspirasional Quotes'
   const description = 'Website sederhana yang menampilkan Kutipan Inspirasional secara acak. Website ini menampilkan kutipan yang submit oleh para kontributor terbuka dan para peserta event Hacktoberfest 2021. Dapatkan kutipan yang membuatmu tetap termotivasi!'

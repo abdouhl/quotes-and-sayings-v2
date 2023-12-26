@@ -49,7 +49,7 @@ function getGradientByIndex(index = 0) {
           <div class="flex flex-col flex-1">
             <div>
               <p dir="rtl" v-if="isValidLink(quote.author_detail_url)" class="card-content--author font-bold text-m text-gray-100">
-          - <a :href="quote.author_detail_url" target="_blank" :title="`Read more about ${quote.author}`" rel="noreferrer noopener" class="pb-1 hover:border-b-2 hover:border-gray-200">{{ quote.author }}</a>
+          - <a :href="`/author/${quote.auth_slug}`" target="_blank" :title="`Read more about ${quote.author}`" rel="noreferrer noopener" class="pb-1 hover:border-b-2 hover:border-gray-200">{{ quote.author }}</a>
         </p>
         <p dir="rtl" v-else class="card-content--author text-sm md:whitespace-nowrap text-gray-100">
           - {{ quote.author }}

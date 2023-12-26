@@ -1,6 +1,6 @@
 <template>
   <div class="app-container transition-colors">
-    <app-hero />
+    
     <router-view></router-view>
 
     <div class="flex justify-center pb-[54px]">

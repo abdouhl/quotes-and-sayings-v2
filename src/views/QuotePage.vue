@@ -21,6 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
+<app-hero title="أقوال و اقتباسات" />
   <div class="flex flex-col items-center justify-center">
     <div v-if="!!quote" class="flex flex-col w-11/12 md:w-6/12 mb-[86px]">
       <div class="grid grid-flow-row-dense grid-cols-1 gap-5 md:gap-6 xl:gap-8">

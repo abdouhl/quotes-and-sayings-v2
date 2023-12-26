@@ -1,6 +1,6 @@
 import { RouteRecordRaw } from 'vue-router'
 import { IQuote } from './types'
-import { quoteRouteLists } from './utils/routes'
+import { quoteRouteLists , authorRouteLists } from './utils/routes'
 
 import QuoteGallery from './views/QuoteGallery.vue'
 import QuoteNotFound from './views/QuoteNotFound.vue'
@@ -23,6 +23,7 @@ export const routes: RouteRecordRaw[] = [
     name: 'not-found',
     component: QuoteNotFound,
   },
+  ...authorRouteLists,
   {
     path: '/:pathMatch(.*)*',
     redirect: '/404',

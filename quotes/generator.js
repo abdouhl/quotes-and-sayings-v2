@@ -68,6 +68,8 @@ async function generateQuotesFile(quotes) {
     for (const quote of user.quotes) {
       const slug = (`${slugify(quote.text.substr(0,45))}-${slugify(quote.author.substr(0,45))}`)
         .replace(/--/gm, '-')
+      const auth_slug = (`${slugify(quote.author.substr(0,90))}`)
+        .replace(/--/gm, '-')
 
       quotes_valid.push({
         id: md5(`${user.username}:${quote.text}`),
@@ -75,6 +77,7 @@ async function generateQuotesFile(quotes) {
         github,
         gradient_id: randomGradientIndex(),
         slug,
+        auth_slug,
         ...quote,
         lastmod: parseDate(quote.created_at),
       })

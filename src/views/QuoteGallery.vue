@@ -113,6 +113,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <app-hero title="أقوال و اقتباسات" />
   <div>
     <quote-dialog :quote="selectedQuote" :show="isShowDialog" @close="closeDialog" />
 
