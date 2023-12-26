@@ -13,7 +13,7 @@ const { reObserver } = useLozad('img.lozad')
 
 //useHead(generateQuoteMeta(route.meta.quote))
 
-const quote = ref<IQuote>(route.meta.quote)
+const quote = route.meta.quote
 
 onMounted(() => {
   reObserver()
