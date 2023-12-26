@@ -14,7 +14,6 @@ export interface IQuote {
   text: string
   author: string
   author_detail_url?: string
-  auth_slug?: string
   created_at?: string
   created?: string
 }
