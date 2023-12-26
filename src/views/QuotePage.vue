@@ -11,7 +11,7 @@ import { generateQuoteMeta } from '../utils/meta'
 const route = useRoute()
 const { reObserver } = useLozad('img.lozad')
 
-useHead(generateQuoteMeta(route.meta.quote))
+//useHead(generateQuoteMeta(route.meta.quote))
 
 const quote = ref<IQuote>(route.meta.quote)
 
