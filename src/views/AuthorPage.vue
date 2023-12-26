@@ -2,30 +2,45 @@
 import { ref, onMounted } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useRoute } from 'vue-router'
-
+import useDialog from '../composables/useDialog'
 import useLozad from '../composables/useLozad'
 
 import { IQuote } from '../types.d'
-import { generateQuoteMeta } from '../utils/meta'
+import { generateAuthorMeta } from '../utils/meta'
 
 const route = useRoute()
 const { reObserver } = useLozad('img.lozad')
 
-useHead(generateQuoteMeta(route.meta.quote))
+useHead(generateAuthorMeta(route.meta.author_quotes[0]))
 
-const quote = ref<IQuote>(route.meta.quote)
-
+const quotes = ref<IQuote>(route.meta.author_quotes)
+const author_name =(route.meta.author_name)
 onMounted(() => {
   reObserver()
 })
+const { isShowDialog, selectedQuote, showDialog, closeDialog } = useDialog()
 </script>
 
 <template>
-<app-hero title="أقوال و اقتباسات" />
-  <div class="flex flex-col items-center justify-center">
-    <div v-if="!!quote" class="flex flex-col w-11/12 md:w-6/12 mb-[86px]">
-      <div class="grid grid-flow-row-dense grid-cols-1 gap-5 md:gap-6 xl:gap-8">
-        <quote-card :quote="quote" size="xl" class="z-20 p-3" />
+<app-hero :title="`أقوال ${author_name}`" />
+  <div>
+    <quote-dialog :quote="selectedQuote" :show="isShowDialog" @close="closeDialog" />
+
+    <quote-search />
+    <div ref="galleryElement" class="flex flex-col items-center justify-center">
+      <div class="w-11/12 md:w-3/4 mb-[86px]">
+        <div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 md:gap-6 xl:gap-8">
+          
+          <section
+            v-for="quote in quotes"
+            :key="quote.id"
+            class="quote-card--container flex cursor-pointer"
+            :class="{'md:col-span-2': quote.text.length > 150}"
+            @click.stop="showDialog(quote, $event)"
+          >
+            <quote-card :quote="quote" />
+          </section>
+        </div>
       </div>
     </div>
   </div>
