@@ -8,7 +8,7 @@ import QuoteNotFound from './views/QuoteNotFound.vue'
 declare module 'vue-router' {
   interface RouteMeta {
     quote?: IQuote
-    author_quotes?: IQuote
+    author_quotes?: IQuote[]
     author_name?: string
   }
 }
