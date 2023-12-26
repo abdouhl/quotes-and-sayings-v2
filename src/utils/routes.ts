@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from "vue-router";
 
 import quotes from '../assets/quotes.json'
 import QuotePage from '../views/QuotePage.vue'
