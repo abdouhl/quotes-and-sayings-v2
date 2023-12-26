@@ -5,6 +5,18 @@ import QuotePage from '../views/QuotePage.vue'
 import AuthorPage from '../views/AuthorPage.vue'
 import { IQuote } from '../types.d'
 
+export const quoteRouteLists: RouteRecordRaw[] = (quotes as IQuote[]).map((quote) => {
+  return {
+    path: `/quote/${quote.slug}`,
+    name: `quote-page-${quote.id}`,
+    component: QuotePage,
+    meta: {
+      quote,
+    },
+  }
+})
+
+
 const authors =[ ...new Set((quotes as IQuote[]).map((quote) => {return quote.auth_slug}))]
 
 export const authorRouteLists: RouteRecordRaw[] = authors.map((author) => {
@@ -21,16 +33,6 @@ export const authorRouteLists: RouteRecordRaw[] = authors.map((author) => {
   }
 })
 
-export const quoteRouteLists: RouteRecordRaw[] = (quotes as IQuote[]).map((quote) => {
-  return {
-    path: `/quote/${quote.slug}`,
-    name: `quote-page-${quote.id}`,
-    component: QuotePage,
-    meta: {
-      quote,
-    },
-  }
-})
 
 
 
