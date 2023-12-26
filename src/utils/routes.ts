@@ -16,7 +16,7 @@ export const quoteRouteLists: RouteRecordRaw[] = (quotes as IQuote[]).map((quote
   }
 })
 
-export const quoteRouteLists: RouteRecordRaw[] = (quotes as IQuote[]).map((quote) => {
+export const authorRouteLists: RouteRecordRaw[] = (quotes as IQuote[]).map((quote) => {
   return {
     path: `/quote/${quote.slug}`,
     name: `quote-page-${quote.id}`,
