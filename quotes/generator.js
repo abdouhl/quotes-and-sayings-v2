@@ -66,7 +66,7 @@ async function generateQuotesFile(quotes) {
       github = await getGithubProfileByUsername(user.username)
 
     for (const quote of user.quotes) {
-      const slug = (`${slugify(quote.text, 45)}-${slugify(quote.author)}`)
+      const slug = (`${slugify(quote.text[:45])}-${slugify(quote.author[:45])}`)
         .replace(/--/gm, '-')
 
       quotes_valid.push({
