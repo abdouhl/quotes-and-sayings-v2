@@ -1,3 +1,4 @@
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useRoute } from 'vue-router'
