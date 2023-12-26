@@ -10,9 +10,11 @@ export interface IQuote {
   github?: IGithubProfile
   gradient_id: number
   slug: string
+  auth_slug: string
   text: string
   author: string
   author_detail_url?: string
+  auth_slug?: string
   created_at?: string
   created?: string
 }
