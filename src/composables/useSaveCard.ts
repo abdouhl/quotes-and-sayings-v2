@@ -1,7 +1,8 @@
 import { ref } from 'vue'
 import { toBlob } from 'html-to-image'
 import { changeDpiBlob } from 'changedpi'
-import { saveAs } from 'file-saver'
+import pkg from 'file-saver';
+const { saveAs } = pkg;
 import { scale } from '../utils/helpers'
 
 const useSaveCard = () => {
