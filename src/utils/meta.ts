@@ -52,7 +52,7 @@ export function generateQuoteMeta(quote: IQuote) {
   }
 }
 
-/*export function generateAuthorMeta(quote: IQuote) {
+export function generateAuthorMeta(quote: IQuote) {
   const title = `أقوال ${quote.author}`
   const description = `"مجموعة منتقاة بعناية من الاقتباسات الملهمة من ${quote.author}`
   const url = `https://www.quotesandsayings.net/author/${quote.auth_slug}`
@@ -65,7 +65,7 @@ export function generateQuoteMeta(quote: IQuote) {
       url,
     }),
   }
-}*/
+}
 
 export function generateIndexMeta() {
   const title = 'Quotes — Every Day Inspirasional Quotes'
