@@ -21,14 +21,13 @@ const authors =[ ...new Set((quotes as IQuote[]).map((quote) => {return quote.au
 
 export const authorRouteLists: RouteRecordRaw[] = authors.map((author) => {
   const author_quotes = (quotes as IQuote[]).filter((quote) => quote.auth_slug === author)
-  const author_name = author_quotes[0].author
+  const quote = author_quotes[0]
   return {
     path: `/author/${author}`,
     name: `author-page-${author}`,
-    component: AuthorPage,
+    component: QuotePage,
     meta: {
-      author_quotes,
-      author_name,
+      quote,
     },
   }
 })
