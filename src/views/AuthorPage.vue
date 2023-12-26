@@ -14,7 +14,7 @@ const { reObserver } = useLozad('img.lozad')
 useHead(generateAuthorMeta(route.meta.author_quotes[0]))
 
 const quotes = ref<IQuote>(route.meta.author_quotes)
-
+const author_name =(route.meta.author_name)
 onMounted(() => {
   reObserver()
 })
@@ -22,7 +22,7 @@ const { isShowDialog, selectedQuote, showDialog, closeDialog } = useDialog()
 </script>
 
 <template>
-<app-hero :title="`أقوال `" />
+<app-hero :title="`أقوال ${author_name}`" />
   <div>
     <quote-dialog :quote="selectedQuote" :show="isShowDialog" @close="closeDialog" />
 
