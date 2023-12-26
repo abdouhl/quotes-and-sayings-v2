@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { toBlob } from 'html-to-image'
 import { changeDpiBlob } from 'changedpi'
-import { fileSaver } from 'file-saver'
+import { FileSaver } from 'file-saver'
 import { scale } from '../utils/helpers'
 
 const useSaveCard = () => {
@@ -30,7 +30,7 @@ const useSaveCard = () => {
     if (image) image = await changeDpiBlob(image, BASE_DPI * SCALE_FACTOR)
     if (!image) return
 
-    fileSaver.saveAs(image, `quotes-nyan-my-id-${Date.now()}.png`)
+    FileSaver.saveAs(image, `quotes-nyan-my-id-${Date.now()}.png`)
   }
 
   return {
