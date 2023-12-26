@@ -8,8 +8,8 @@ import { IQuote } from '../types.d'
 const authors =[ ...new Set((quotes as IQuote[]).map((quote) => {return quote.auth_slug}))]
 
 export const authorRouteLists: RouteRecordRaw[] = authors.map((author) => {
-  const author_quotes = (quotes as IQuote[]).filter((quote) => quote.auth_slug === author) as IQuote[]
-  const author_name = author_quotes[0].author
+  var author_quotes = (quotes as IQuote[]).filter((quote) => quote.auth_slug === author) as IQuote[]
+  var author_name = author_quotes[0].author
   return {
     path: `/author/${author}`,
     name: `author-page-${author}`,

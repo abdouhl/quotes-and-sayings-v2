@@ -11,9 +11,9 @@ import { generateAuthorMeta } from '../utils/meta'
 const route = useRoute()
 const { reObserver } = useLozad('img.lozad')
 
-useHead(generateAuthorMeta(route.meta.author_quotes[0]))
+//useHead(generateAuthorMeta(route.meta.author_quotes[0]))
 
-const quotes = ref<IQuote>(route.meta.author_quotes)
+const quotes = route.meta.author_quotes
 const author_name =(route.meta.author_name)
 onMounted(() => {
   reObserver()
