@@ -15,7 +15,7 @@ import useLozad from '../composables/useLozad'
 
 const CHUNKED_SIZE = 8
 var indexMeta = generateIndexMeta()
-indexMeta.script = [
+indexMeta["script"] = [
     {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"}
   ]
 useHead(indexMeta)
@@ -124,7 +124,7 @@ onUnmounted(() => {
 
 <template>
   <app-hero title="أقوال و اقتباسات" />
-  <section :dir="rtl" class="w-full gap-2 md:gap-8 mty2 md:my-8 px-2 md:px-24 lg:px-36 text-slate-700" >
+  <section dir="rtl" class="w-full gap-2 md:gap-8 mty2 md:my-8 px-2 md:px-24 lg:px-36 text-slate-700" >
     <ins  class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
