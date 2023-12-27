@@ -102,10 +102,17 @@ debouncedWatch([search, filter], () => {
 
 applyfilteredQuotes(allQuotes.value, false)
 
-onMounted(() => {
+onMounted( () => {
   window.addEventListener('scroll', handleScroll)
-
   reObserver()
+	var message = document.createElement("script");
+  var alert = document.createTextNode("(adsbygoogle = window.adsbygoogle || []).push({});");
+  message.appendChild(alert);
+  document.body.appendChild(message);	
+})
+
+onMounted(() => {
+
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
@@ -114,6 +121,15 @@ onUnmounted(() => {
 
 <template>
   <app-hero title="أقوال و اقتباسات" />
+  <section :dir="rtl" class="w-full gap-2 md:gap-8 mty2 md:my-8 px-2 md:px-24 lg:px-36 text-slate-700" >
+    <ins  class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3610150616518651"
+     data-ad-slot="9731162583">
+    </ins>
+  </section>
   <div>
     <quote-dialog :quote="selectedQuote" :show="isShowDialog" @close="closeDialog" />
 
@@ -136,6 +152,11 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
+  
 </template>
 
-<style></style>
+<style>
+/*.adsbygoogle {
+  border: 1px solid red;
+}*/
+</style>
