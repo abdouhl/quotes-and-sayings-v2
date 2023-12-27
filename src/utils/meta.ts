@@ -79,8 +79,5 @@ export function generateIndexMeta() {
       description,
       url,
     }),
-    script: [
-    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"}
-  ]
   }
 }
