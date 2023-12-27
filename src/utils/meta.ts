@@ -1,10 +1,5 @@
 import { IQuote, IMeta } from '../types'
 
-interface IScript {
-  src: string
-  async: string
-  crossorigin: string
-}
 
 function generateMeta({ title, description, url }: IMeta) {
   return [
@@ -80,7 +75,7 @@ export function generateIndexMeta() {
   const src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651'
   const async = ''
   const crossorigin = "anonymous"
-  const script: IScript[] = [
+  const script = [
     {src ,async ,crossorigin },
   ]
   return {
