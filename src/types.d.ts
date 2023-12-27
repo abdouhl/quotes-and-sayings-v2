@@ -22,6 +22,14 @@ export interface IMeta {
   description: string
   url: string
 }
+
+export interface IScript {
+  src: string
+  async: string
+  crossorigin: string
+}
+
+
 export enum Theme {
   System = 'system',
   Light = 'light',
