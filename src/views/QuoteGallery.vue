@@ -14,11 +14,8 @@ import useDialog from '../composables/useDialog'
 import useLozad from '../composables/useLozad'
 
 const CHUNKED_SIZE = 8
-var indexMeta = generateIndexMeta()
-indexMeta["script"] = [
-    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"}
-  ]
-useHead(indexMeta)
+
+useHead(generateIndexMeta())
 
 const allQuotes = ref<IQuote[]>((quotesRaw as IQuote[]))
 let quotesChunked = chunk(([] as IQuote[]), CHUNKED_SIZE)
