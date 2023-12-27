@@ -5,7 +5,7 @@ import { useHead } from '@vueuse/head'
 
 import { IQuote, SearchType } from '../types.d'
 import { chunk } from '../utils/helpers'
-import { generateIndexMeta } from '../utils/meta'
+
 import quotesRaw from '../assets/quotes.json'
 
 import { search, filter, type, count, searchFilter, favoriteFilter } from '../composables/useSearch'
@@ -15,7 +15,18 @@ import useLozad from '../composables/useLozad'
 
 const CHUNKED_SIZE = 8
 
-useHead(generateIndexMeta())
+useHead({
+  title: 'Quotes — Every Day Inspirasional Quotes',
+  meta: [
+    { name: 'title', content: 'Quotes — Every Day Inspirasional Quotes' },
+    { name: 'description', content: 'Website sederhana yang menampilkan Kutipan Inspirasional secara acak. Website ini menampilkan kutipan yang submit oleh para kontributor terbuka dan para peserta event Hacktoberfest 2021. Dapatkan kutipan yang membuatmu tetap termotivasi!'  },
+    { name: 'robots', content: "index, follow" },
+  ],
+  script: [
+    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"}
+  ]
+})
+
 
 const allQuotes = ref<IQuote[]>((quotesRaw as IQuote[]))
 let quotesChunked = chunk(([] as IQuote[]), CHUNKED_SIZE)
