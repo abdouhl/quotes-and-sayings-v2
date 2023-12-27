@@ -1,0 +1,31 @@
+#AdSense
+google.com, pub-3610150616518651, DIRECT, f08c47fec0942fa0
+
+#Appnexus
+appnexus.com, 3716, DIRECT
+appnexus.com, 1019, RESELLER, f5ab79cb980f11d1
+
+#Index
+indexexchange.com, 183472, DIRECT
+indexexchange.com, 199980, DIRECT, 50b1c356f2c5c8fc
+
+#OpenX
+openx.com, 557752731, DIRECT, 6a698e2ec38604c6
+openx.com, 537120216, DIRECT, 6a698e2ec38604c6
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+
+#Pubmatic
+pubmatic.com, 159855, DIRECT, 5d62403b186f2ace
+pubmatic.com, 159700, DIRECT, 5d62403b186f2ace
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+
+#Rubicon
+rubiconproject.com, 15348, DIRECT, 0bfd66d529a55807
+rubiconproject.com, 10278, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+
+#Sovrn
+sovrn.com, 47328, DIRECT, fafdf38b16bf6b2b
+lijit.com, 47328, DIRECT, fafdf38b16bf6b2b #SOVRN
+lijit.com, 47328-eb, DIRECT, fafdf38b16bf6b2b #SOVRN
