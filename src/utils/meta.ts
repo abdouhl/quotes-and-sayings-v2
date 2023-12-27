@@ -76,9 +76,12 @@ export function generateAuthorMeta(quote: IQuote) {
 export function generateIndexMeta() {
   const title = 'Quotes — Every Day Inspirasional Quotes'
   const description = 'Website sederhana yang menampilkan Kutipan Inspirasional secara acak. Website ini menampilkan kutipan yang submit oleh para kontributor terbuka dan para peserta event Hacktoberfest 2021. Dapatkan kutipan yang membuatmu tetap termotivasi!'
-  const url = 'https://quotes.nyan.my.id'
+  const url = 'https://quotes.nyan.my.id'  
+  const src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651'
+  const async = ''
+  const crossorigin = "anonymous"
   const script: IScript[] = [
-    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"},
+    {src ,async ,crossorigin },
   ]
   return {
     title,
@@ -87,6 +90,6 @@ export function generateIndexMeta() {
       description,
       url,
     }),
-    script 
+    script ,
   }
 }
