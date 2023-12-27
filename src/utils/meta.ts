@@ -1,5 +1,11 @@
 import { IQuote, IMeta } from '../types'
 
+interface IScript {
+  src: string
+  async: string
+  crossorigin: string
+}
+
 function generateMeta({ title, description, url }: IMeta) {
   return [
     {
@@ -71,8 +77,8 @@ export function generateIndexMeta() {
   const title = 'Quotes — Every Day Inspirasional Quotes'
   const description = 'Website sederhana yang menampilkan Kutipan Inspirasional secara acak. Website ini menampilkan kutipan yang submit oleh para kontributor terbuka dan para peserta event Hacktoberfest 2021. Dapatkan kutipan yang membuatmu tetap termotivasi!'
   const url = 'https://quotes.nyan.my.id'
-  const script = [
-    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"}
+  const script: IScript[] = [
+    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"},
   ]
   return {
     title,
