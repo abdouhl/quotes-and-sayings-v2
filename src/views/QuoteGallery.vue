@@ -137,6 +137,7 @@ onUnmounted(() => {
 
 <template>
   <app-hero title="أقوال و اقتباسات" />
+  <!--
   <section dir="rtl" class="w-full gap-2 md:gap-8 mty2 md:my-8 px-2 md:px-24 lg:px-36 text-slate-700" >
     <ins  class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -145,7 +146,7 @@ onUnmounted(() => {
      data-ad-client="ca-pub-3610150616518651"
      data-ad-slot="9731162583">
     </ins>
-  </section>
+  </section>-->
   <div>
     <quote-dialog :quote="selectedQuote" :show="isShowDialog" @close="closeDialog" />
 
@@ -154,16 +155,23 @@ onUnmounted(() => {
     <div ref="galleryElement" class="flex flex-col items-center justify-center">
       <div class="w-11/12 md:w-3/4 mb-[86px]">
         <div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 md:gap-6 xl:gap-8">
-          
+          <ins  class="adsbygoogle quote-card--container flex cursor-pointer w-full"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3610150616518651"
+     adsense_ui_features="rc:10"
+     data-ad-slot="9731162583">
+     </ins>
           <section
             v-for="quote in quotes"
             :key="quote.id"
             class="quote-card--container flex cursor-pointer"
             :class="{'md:col-span-2': quote.text.length > 150}"
-            @click.stop="showDialog(quote, $event)"
+            
           >
           
-            <quote-card v-if="!(quote.id === 'pdsssssssssssssssssssssssssssssss')" :quote="quote" />
+            <quote-card  v-if="!(quote.id === 'pdsssssssssssssssssssssssssssssss')" :quote="quote" @click.stop="showDialog(quote, $event)" />
             <ins  v-if="quote.id === 'pdsssssssssssssssssssssssssssssss'" class="adsbygoogle quote-card--container flex cursor-pointer w-full"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"

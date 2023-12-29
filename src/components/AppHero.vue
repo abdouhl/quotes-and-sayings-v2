@@ -42,8 +42,7 @@ onMounted(() => {
       </button>
     </div>
 
-    <h1 dir="rtl" class="py-4 mt-4 md:mt-0 text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-purple-600">{{ title }}
-    </h1>
+    <h1 dir="rtl" class="py-4 mt-4 md:mt-0 text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-purple-600"  ><a href="/">{{ title }}</a></h1>
     <p dir="rtl" class="w-11/12 md:w-3/4 mb-4 text-sm md:text-xl text-center text-gray-500 dark:text-gray-50">
      مجموعة منتقاة بعناية من الاقتباسات الملهمة من مشاهير ورياضيين وسياسيين ومؤلفين.
     </p>
