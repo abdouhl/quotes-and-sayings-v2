@@ -11,7 +11,17 @@ import { generateAuthorMeta } from '../utils/meta'
 const route = useRoute()
 const { reObserver } = useLozad('img.lozad')
 
-//useHead(generateAuthorMeta(route.meta.author_quotes[0]))
+useHead({
+  title: 'أقوال و اقتباسات',
+  meta: [
+    { name: 'title', content: 'أقوال و اقتباسات' },
+    { name: 'description', content: 'مجموعة منتقاة بعناية من الاقتباسات الملهمة من مشاهير ورياضيين وسياسيين ومؤلفين'  },
+    { name: 'robots', content: "index, follow" },
+  ],
+  script: [
+    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3610150616518651',async:'',crossorigin: "anonymous"}
+  ]
+})
 
 const quotes = route.meta.author_quotes
 const author_name =(route.meta.author_name)
