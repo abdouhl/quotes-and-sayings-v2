@@ -16,10 +16,10 @@ import useLozad from '../composables/useLozad'
 const CHUNKED_SIZE = 8
 
 useHead({
-  title: 'Quotes — Every Day Inspirasional Quotes',
+  title: 'أقوال و اقتباسات',
   meta: [
-    { name: 'title', content: 'Quotes — Every Day Inspirasional Quotes' },
-    { name: 'description', content: 'Website sederhana yang menampilkan Kutipan Inspirasional secara acak. Website ini menampilkan kutipan yang submit oleh para kontributor terbuka dan para peserta event Hacktoberfest 2021. Dapatkan kutipan yang membuatmu tetap termotivasi!'  },
+    { name: 'title', content: 'أقوال و اقتباسات' },
+    { name: 'description', content: 'مجموعة منتقاة بعناية من الاقتباسات الملهمة من مشاهير ورياضيين وسياسيين ومؤلفين'  },
     { name: 'robots', content: "index, follow" },
   ],
   script: [
@@ -47,7 +47,10 @@ function loadQuotes() {
 
   if (quotes.value.length > 0) {
     quotes.value = [
-      ...quotes.value,
+      ...quotes.value,{
+    "id": "pdsssssssssssssssssssssssssssssss",
+    "text": "ليست قيمةُ الإنسان بما يبلغه، بل بما يتوقُ البلوغ إليه.",
+  },
       ...quotesLists,
     ]
   }
@@ -157,8 +160,18 @@ onUnmounted(() => {
             :class="{'md:col-span-2': quote.text.length > 150}"
             @click.stop="showDialog(quote, $event)"
           >
-            <quote-card :quote="quote" />
+          
+            <quote-card v-if="!(quote.id === 'pdsssssssssssssssssssssssssssssss')" :quote="quote" />
+            <ins  v-if="quote.id === 'pdsssssssssssssssssssssssssssssss'" class="adsbygoogle quote-card--container flex cursor-pointer w-full"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3610150616518651"
+     adsense_ui_features="rc:10"
+     data-ad-slot="9731162583">
+    </ins>
           </section>
+          
         </div>
       </div>
     </div>
