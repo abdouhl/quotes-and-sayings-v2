@@ -44,27 +44,12 @@ function loadQuotes() {
   if (quotesIndex.value > (quotesChunked.length - 1)) return
 
   const quotesLists = quotesChunked[quotesIndex.value]
-
+  var ad_space = { ...quotes.value[0] }
+  ad_space["id"] = "pdsssssssssssssssssssssssssssssss"
   if (quotes.value.length > 0) {
     quotes.value = [
-      ...quotes.value,{
-    "id": "pdsssssssssssssssssssssssssssssss",
-    "username": "abdouhl",
-    "github": {
-      "available": true,
-      "name": "abderrahmane",
-      "avatar_url": "https://avatars.githubusercontent.com/u/73205653?v=4",
-      "followers": 0
-    },
-    "gradient_id": 8,
-    "slug": "lyst-qymhu-alinsan-bma-yblghh-bl-bma-ytwqu-al-jbran-khlyl-jbran",
-    "auth_slug": "jbran-khlyl-jbran",
-    "text": "ليست قيمةُ الإنسان بما يبلغه، بل بما يتوقُ البلوغ إليه.",
-    "author": "جبران خليل جبران",
-    "author_detail_url": "https://www.quotesandsayings.net/authors/جبران-خليل-جبران",
-    "created_at": "24 Oktober 2023",
-    "lastmod": "2023-10-24T11:00:00.000Z"
-  },
+      ...quotes.value,
+      ad_space,
       ...quotesLists,
     ]
   }
