@@ -59,9 +59,9 @@ onMounted(() => {
 </template>
 
 <style>
-.adsbygoogle {
+/*.adsbygoogle {
   border: 1px solid red;
-}
+}*/
 .quote-card--page-view {
   @apply md:hover:rotate-0;
 }
