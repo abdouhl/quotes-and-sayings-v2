@@ -39,7 +39,12 @@ const { reObserver } = useLozad('img.lozad')
 const { isShowDialog, selectedQuote, showDialog, closeDialog } = useDialog()
 
 const isEmpty = computed(() => (quotes.value.length === 0 && quotesIndex.value === 0))
-
+function loadAd() {
+  var message = document.createElement("script");
+  var alert = document.createTextNode("(adsbygoogle = window.adsbygoogle || []).push({});");
+  message.appendChild(alert);
+  document.body.appendChild(message);	
+}
 function loadQuotes() {
   if (quotesIndex.value > (quotesChunked.length - 1)) return
 
@@ -53,6 +58,7 @@ function loadQuotes() {
       ...quotesLists,
     ]
   }
+  loadAd()
 }
 
 function handleMainSearch() {
@@ -118,10 +124,7 @@ applyfilteredQuotes(allQuotes.value, false)
 onMounted( () => {
   window.addEventListener('scroll', handleScroll)
   reObserver()
-	var message = document.createElement("script");
-  var alert = document.createTextNode("(adsbygoogle = window.adsbygoogle || []).push({});");
-  message.appendChild(alert);
-  document.body.appendChild(message);	
+	loadAd()
 })
 
 onMounted(() => {
